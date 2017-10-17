@@ -1,0 +1,392 @@
+traitID,hierarchy,traitName,trait_class,broaderTerm,type_of_data,traitUnit,MaxAllowedValue,MinAllowedValue,suggestedFactorLevels,traitDescription,extendedDescription,example,relationSource,Source
+,b1,Protection_behaviour,behaviour,behaviour,factor,NA,NA,NA,hibernation/starvation,strategies used for protection,Any animal behaviour allowing it to escape from a danger or a nocive situation and to survive,hibernation,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Protection_behaviour
+,b2,Water_regulation_behaviour,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which ensures an hydric status of the animal,,NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=waterregulation%20strategies
+,b3,Thermal_regulation_behaviour,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which keeps the body temperature within certain boundaries,,NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Thermoregulation_strategies
+,b4,Phenology,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which manifests during specific times,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Phenology
+,b41,Activity_period,behaviour,Phenology,character,NA,NA,NA,NA,first and last month of a year when individuals can be observed,"First and last month are abbreviated to three letters based on english names. Months are connected with ""-"" for continous time spans or separated with ""."" for interupted time spans.",Apr-Aug.Nov,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
+,b411,Observation_first_date,behaviour,Activity_period,integer,date,365,1,NA,"earliest observation within a year, given as yearday",,125,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
+,b412,Observation_last_date,behaviour,Activity_period,integer,date,365,1,NA,"latest observation within a year, given as yearday",,350,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
+,b42,Activity_period_length,behaviour,Phenology,integer,month,12,0,NA,number of months during individuals are active,Weeks and days are expressed as fractions of an an average month (i.e. 30 days),3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
+,b421,Flight_period_length,behaviour,Activity_period_length,integer,month,12,0,NA,number of months during which flying individuals are observed,Weeks and days are expressed as fractions of an an average month (i.e. 30 days),1.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Adult_activity
+,b5,Dispersal_mode,behaviour,behaviour,factor,NA,NA,NA,active/passive/both,strategies used for dispersal,Does not include disperal of offspring or reproductive cells,active,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Dispersal_behaviour
+,b51,Dispersal_effectiveness,behaviour,Dispersal_mode,factor,NA,NA,NA,0/0.25/0.5/0.75/1,dispersal ability relative to other species within the same taxonomic group,,0.5,takenfrom,https://www.nature.com/articles/sdata201513
+,b52,Dispersal_range_active,behaviour,Dispersal_mode,factor,NA,NA,NA,meters/kilometers/10kilometers/100kilometers/continents/global,potential range of dispersal using active dispersal strategies,,10kilometers,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Dispersal_behaviour
+,b53,Dispersal_range_passive,behaviour,Dispersal_mode,factor,NA,NA,NA,meters/kilometers/10kilometers/100kilometers/continents/global,potential range of dispersal using passive dispersal strategies,,10kilometers,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Dispersal_behaviour
+,b54,Flight_ability,behaviour,Dispersal_mode,logical,NA,NA,NA,NA,locomotion by means of wings,,TRUE,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Dispersal_behaviour
+,b6,Intraspecific_relation,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which increases interactions within the species,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Intraspecific_relation
+,b61,Clustering_of_individuals,behaviour,Intraspecific_relation,logical,NA,NA,NA,NA,individuals usually occur in spatial clusters,,TRUE,,
+,b62,Social_strategy,behaviour,Intraspecific_relation,factor,NA,NA,NA,subsocial/solitary_but_social/communal/quasisocial/semisocial/eusocial,degree to which individuals in an animal population tend to associate in social groups and form cooperative societies,"Any behavioural or ecological features that increase interindividual attraction, and tolerance.",eusocial,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
+,b621,Social_structure,behaviour,Social_strategy,character,NA,NA,NA,NA,description of the social structure,"details wether cooperation includes feeding, reproduction or protection",NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
+,b6211,Number_queens,behaviour,Social_structure,numeric,count,999,0,NA,number of reproducing females within one colony/state/hive,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
+,b7,Protection_behaviour,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which allows escaping from a danger or a nocive situation and to survive,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Protection_behaviour
+,b71,Hibernation_strategy,behaviour,Protection_behaviour,factor,NA,NA,NA,dormancy/resting/freezing,"strategy against climatic adversity, such as low temperature or drought",,dormancy,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Overwintering
+,b711,Hibernation_in_conifers,behaviour,Hibernation_strategy,logical,NA,NA,NA,NA,coniferous tree species are used for hibernation,,TRUE,refines,Hibernation_strategy
+,b8,Reproduction_behaviour,behaviour,behaviour,character,NA,NA,NA,NA,any behavioural adaptation which increases the odds of succesful reproduction,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Reproduction_behaviour
+,b81,Physical_eggs_protection,behaviour,Reproduction_behaviour,logical,NA,NA,NA,NA,protection of eggs by physical means,Includes protection outside the parent and inside the parend,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Physical_eggs_protection
+,b811,Egg_protection_type,behaviour,Physical_eggs_protection,factor,NA,NA,NA,nest/internal/parasitism,strategies for egg protection,Parasitims includes cuckoldry. Internal protection applies to viviparous strategies,internal,refines,Egg_protection_type
+,b8111,Nest_stratum,behaviour,Egg_protection_type,factor,NA,NA,NA,burrow/ground/vegetation,stratum of the nest location,Vegetation includes low and dead vegetation,ground,refines,Egg_protection_type
+,b8112,Egg_placement,behaviour,Egg_protection_type,factor,NA,NA,NA,soil/ground/vegetation/stem/leaf/leaf_underside/leaf_upside/bark/wood/living_host/sedated_host/carcass/dung,microhabitat in which eggs are placed,defined when eggs are placed without construction of additional supporting structures,ground,refines,Egg_protection_type
+,b82,Pupal_location,behaviour,Reproduction_behaviour,character,NA,NA,NA,NA,position of the pupa within the nest,Usually applies to burrows or tree holes,NA,refines,Egg_protection_type
+,b83,Parental_care,behaviour,Reproduction_behaviour,factor,NA,NA,NA,females/males/both_sexes/workers/none,investment in protection or nurturing of offspring,,females,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Parental_care
+,e1,Altitude,environment,environment,numeric,m,9999,0,NA,average elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
+,e11,Altitude_max,environment,Altitude,numeric,m,9999,0,NA,highest elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
+,e12,Altitude_min,environment,Altitude,numeric,m,9999,0,NA,lowest elevation above sea level at which individuals have been observed,,250,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
+,e13,Altitude_class,environment,Altitude,factor,NA,NA,NA,planar/kollin/montan/subalpin/alpin/nival,occurence of individuals is restricted to a certain altitude class,planar: to 400m/kollin: 400-800m/montan: 800-1.500/subalpin: 1.500-2.300/alpin: 2.300-2.700/nival: above 2.700,alpin,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Altitude
+,e2,Habitat_specialization ,environment,environment,logical,NA,NA,NA,NA,occurence of individuals is restricted to a certain habitat,Any level of habitat specialization should be indicated here.,TRUE,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Habitat
+,e21,Habitat_preferences,environment,Habitat_specialization ,integer,NA,9999,0,NA,number of habitat types where individuals can be observed,"Obiquitos species are assigned 0, strict specialists are assigned 1.",2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Habitat
+,e211,Ecological_niche,environment,Habitat_preferences,factor,NA,NA,NA,azidophil/chromophil/coprophil/halophil/heliophil/hygrophil/hylophil/krenophil/mycetophil/myrmecophil/necrophil/osmophil/petrophil/pholeophil/psammophil/rheophil/saprophil/silicophil/thermophil/tixophil/troglophil/tyrophil/xerophil,species distribution is defined by an environmental factor,factors describe needs (…phil) or relationships (…biont) or tolerances (…tolerant). azido: acid/chromo: colours/copro: faeces/halo: salt/helio: light/hygro: humidity/hylo: wood/kreno: springs/myceto: fungus/myrmec: ants/necro: carcass/osmo: smell/petro: bolder/pholeo: darkness/psammo: sand/rheo: currents/sapro: decomposition/silico: pebbles/thermo: temperature/tixo: touch/troglo: cave/tyro: bogs_swamps/xero: dryness,mycetophil,takenfrom,Koch (1989) Die Käfer Mitteleuropas - Ökologie. Goecke & Evers Verlag. ISBN 3-87263-037-7
+,e2111,Micro_habitat,environment,Ecological_niche,factor,NA,NA,NA,living_tree/litter/faeces/decaying_trunk/tree_hole/ant_hill/mushroom/mineral_surface/roots/corpse_carcass/detritus/under_rocks/moss/sediment,species distribution along an environmental factor describing the microhabitat dimension of the ecological niche,microhabitat is defined as the smallest part of the environment that substitutes as habitat,living_tree,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Microhabitat
+,e2112,Humidity,environment,Ecological_niche,factor,NA,NA,NA,dry/humid/wet,humidity conditions in which individuals occur,"Humidity can be measured in different strata, e.g. in the soil or in the air",dry,broadens,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,e21121,Humidity_soil,environment,Humidity,numeric,g/kg,1000,0,NA,average value of mass water content in soil at which individuals were observed,,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,e211211,Humidity_soil_max,environment,Humidity_soil,numeric,g/kg,1000,0,NA,maximum value of mass water content in soil at which individuals were observed,,10,inheritsfrom,Humidity_soil
+,e211212,Humidity_soil_min,environment,Humidity_soil,numeric,g/kg,1000,0,NA,minimum value of mass water content in soil at which individuals were observed,,0.5,inheritsfrom,Humidity_soil
+,e21122,Humidity_air,environment,Humidity,numeric,%,100,0,NA,average relative humidity in the air at which individuals were observed,,60,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_humidity
+,e211221,Humidity_air_max,environment,Humidity_air,numeric,%,100,0,NA,maximum relative humidity in the air at which individuals were observed,,60,inheritsfrom,Humidity_air
+,e211222,Humidity_air_min,environment,Humidity_air,numeric,%,100,0,NA,minimum relative humidity in the air at which individuals were observed,,5,inheritsfrom,Humidity_air
+,e2113,Oxygen_water,environment,Ecological_niche,numeric,mg/L,1000000,0,NA,average amount of oxygen in the waterbody at which individuals were observed,,10,,
+,e21131,Oxygen_water_max,environment,Oxygen_water,numeric,mg/L,1000000,0,NA,maximum amount of oxygen in the waterbody at which individuals were observed,,10,inheritsfrom,Oxygen_water
+,e2114,Temperature_survival,environment,Ecological_niche,numeric,°C,999,-1000,NA,average temperature under which individuals can survive,Temperature measured in the prefered microhabitat,45,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21141,Temperature_survival_max,environment,Temperature_survival,numeric,°C,999,-1000,NA,maximum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,45,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21142,Temperature_survival_min,environment,Temperature_survival,numeric,°C,999,-1000,NA,minimum temperature under which individuals can survive,Temperature measured in the prefered microhabitat,-20,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e2115,Temperature_activity,environment,Ecological_niche,numeric,°C,999,-1000,NA,average temperature under which individuals are active,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21151,Temperature_activity_max,environment,Temperature_activity,numeric,°C,999,-1000,NA,maximum temperature under which individuals are active,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21152,Temperature_activity_min,environment,Temperature_activity,numeric,°C,999,-1000,NA,minimum temperature under which individuals are active,Temperature measured in the prefered microhabitat,10,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e2116,Temperature_reproduction,environment,Ecological_niche,numeric,°C,999,-1000,NA,average temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21161,Temperature_reproduction_max,environment,Temperature_reproduction,numeric,°C,999,-1000,NA,maximum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21162,Temperature_reproduction_min,environment,Temperature_reproduction,numeric,°C,999,-1000,NA,minimum temperature under which individuals reproduce,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e2117,Temperature_development,environment,Ecological_niche,numeric,°C,999,-1000,NA,average temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21171,Temperature_development_max,environment,Temperature_development,numeric,°C,999,-1000,NA,maximum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,30,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e21172,Temperature_development_min,environment,Temperature_development,numeric,°C,999,-1000,NA,minimum temperature under which juveniles develop into adults,Temperature measured in the prefered microhabitat,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Soil_temperature
+,e212,Stratum_preference,environment,Habitat_preferences,factor,NA,NA,NA,s/s-(g)/s-(h)/s-(t)/g/(s)-g/g-(h)/g-(t)/h/(s)-h/(g)-h/h-(t)/t/(s)-t/(g)-t/(h)-t,vertical distribution of habitat,Stratum in which individuals are usually observed. Second prefered habitat is given in brackets. S:soil/g:ground/h:herb-layer/t:shrub & tree_layer,ground,takenfrom,https://www.nature.com/articles/sdata201513
+,e2121,Stratum_phenology,environment,Stratum_preference,factor,NA,NA,NA,monoroph/allaxoroph/xeroph/monochor/allaxochor/xerochor/homotop/heterotop,individuals occur in the same or different habitats throughout the year,monoroph: only one stratum/allaxoroph: stratum change/xeroph: several strata at the same time/monochor: at specific locations within one stratum/allaxochor: change of location/xerochor: several locations within one stratum/homotop: complete life-cycle in one habitat/heterotop: life-cycle in different habitats,monoroph,takenfrom,Koch (1989) Die Käfer Mitteleuropas - Ökologie. Goecke & Evers Verlag. ISBN 3-87263-037-7
+,e213,Habitat_CORINE,environment,Habitat_preferences,factor,NA,NA,NA,,habitats where occurrence of individuals is most common,Land cover classes are based on CORINE land cover classes,321-322,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Habitat
+,e214,Habitat_forest,environment,Habitat_preferences,logical,NA,NA,NA,NA,individuals only occur in forested areas,,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Forest
+,e215,Habitat_grassland,environment,Habitat_preferences,logical,NA,NA,NA,NA,individuals only occur in grasslands,,FALSE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Grassland
+,e216,Nature_Orientation,environment,Habitat_preferences,factor,NA,NA,NA,climax/semi-natural/disturbed/artificial,occurence of individuals is restricted to habitats with a specific state of naturalness,naturalness ranges from climax (most natural) to artificial,semi-natural,,
+,e217,Climate_zones_Köppen,environment,Habitat_preferences,factor,NA,NA,NA,Af/Am/As/Aw/BWh/BWk/BSh/BSk/Csa/Csb/Csc/Cwa/Cwb/Cwc/Cfa/Cfb/Cfc/Dsa/Dsb/Dsc/Dsd/Dwa/Dwb/Dwc/Dwd/Dfa/Dfb/Dfc/Dfd/ET/EF,climate zone(s) in which individuals are observed,Climate zone definition follows Köppen with five main groups: A (tropical)/ B (dry) / C (temperate) / D (continental) / E (polar),Cfb-Csa,takenfrom,https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification
+,e22,Relict_species,environment,Habitat_specialization ,logical,NA,NA,NA,NA,"species is dependent on pre-anthropogenic conditions (e.g. ""Urwald-Reliktarten"")",,TRUE,,
+,e22132,Oxygen_water_min,environment,Oxygen_water,numeric,mg/L,1000000,0,NA,minimum amount of oxygen in the waterbody at which individuals were observed,,5,inheritsfrom,Oxygen_water
+,e23,Deadwood_dependent,environment,Habitat_specialization ,logical,NA,NA,NA,NA,species is obligat dependent on deadwood,Dependence needs to be critical for survival or reproduction,TRUE,,
+,??,Stable_Isotopes,feeding,Stoichiometry,numeric,delta per mill,,,NA,,,,,
+,f1,Feeding_guild,feeding,feeding,factor,NA,NA,NA,h/c/f/d/o,feeding guild of the species,h: herbivor/ c: carnivor/ f: fungivores/ d: detritivor/ o: omnivores,c,takenfrom,https://www.nature.com/articles/sdata201513
+,f11,Feeding_guild_adults,feeding,Feeding_guild,factor,NA,NA,NA,h/c/f/d/o,feeding guild of the species in its adult stage,h: herbivor/ c: carnivor/ f: fungivores/ d: detritivor/ o: omnivores,c,takenfrom,https://www.nature.com/articles/sdata201513
+,f12,Feeding_guild_juveniles,feeding,Feeding_guild,factor,NA,NA,NA,h/c/f/d/o,feeding guild of the species in its juvenile stage,h: herbivor/ c: carnivor/ f: fungivores/ d: detritivor/ o: omnivores,c,takenfrom,https://www.nature.com/articles/sdata201513
+,f13,Feeding_mode,feeding,Feeding_guild,factor,NA,NA,NA,e/c/s,mode of aquiring the nutrients,e: extraintestinal/ c: chewing/ s:sucking,e,takenfrom,https://www.nature.com/articles/sdata201513
+,f14,Feeding_mode_juveniles,feeding,Feeding_guild,factor,NA,NA,NA,e/c/s,mode of aquiring the nutrients during larval stage,e: extraintestinal/ c: chewing/ s:sucking,e,takenfrom,https://www.nature.com/articles/sdata201513
+,f15,Feeding_specialization,feeding,Feeding_guild,factor,NA,NA,NA,m/o/p,width of host specialization,m: monophag (on one species or genus of host)/ o: oligophag (on one family or subfamily of host)/ p: poliphag (on more than one family of host),p,takenfrom,https://www.nature.com/articles/sdata201513
+,f151,Host,feeding,Feeding_specialization,character,NA,NA,NA,NA,scientific name or group of hosts or prey,,Quercus robur,,
+,f1511,Host_number,feeding,Host,integer,count,9999,1,NA,number of different known host or prey species,,5,,
+,f152,Endoghagous_lifestile,feeding,Feeding_specialization,factor,NA,NA,NA,gl/gr/gs/ml/mr/ms/mro,details on endophagously living larvae,gl: gall-inducer leaves / g: gall-inducer reproductive organs / gs: gall-inducer stems / ml: miner leaves / mr: miner reproductive organs / ms: miner stem / mro: miner roots,ml,takenfrom,https://www.nature.com/articles/sdata201513
+,f16,Feeding_specialization_juveniles,feeding,Feeding_guild,factor,NA,NA,NA,m/o/p,width of host specialization in juveniles,m: monophag (on one species or genus of host)/ o: oligophag (on one family or subfamily of host)/ p: poliphag (on more than one family of host),p,takenfrom,https://www.nature.com/articles/sdata201513
+,f17,Feeding_tissue,feeding,Feeding_guild,factor,NA,NA,NA,m/p/r/x/se/bl/bo/f/ms/w,tissue from which nutrients are aquired,m: mesophyll-cells / p: phloem / r: reproductive organs / x: xylem / se: ripe seeds / bl: blood / bo: bones / f: fatty tissue / ms: muscular tissue / w: whole organism,bl,refines,https://www.nature.com/articles/sdata201513
+,f171,Feeding_plant_part,feeding,Feeding_tissue,factor,NA,NA,NA,l/r/ro/s/se,plant parts on which herbivorous species feed,l: leaves / r: reproductive organs / ro: roots / s: stem / se: ripe seeds,l,takenfrom,https://www.nature.com/articles/sdata201513
+,f172,Feeding_plant_part_juveniles,feeding,Feeding_tissue,factor,NA,NA,NA,l/r/ro/s/se,plant parts on which herbivorous species feed during juvenile stage,l: leaves / r: reproductive organs / ro: roots / s: stem / se: ripe seeds,l,takenfrom,https://www.nature.com/articles/sdata201513
+,f18,Feeding_tissue_juveniles,feeding,Feeding_guild,factor,NA,NA,NA,m/p/r/x/se/bl/bo/f/ms/w,tissue from which nutrients are aquired during the juvenil stage,m: mesophyll-cells / p: phloem / r: reproductive organs / x: xylem / se: ripe seeds / bl: blood / bo: bones / f: fatty tissue / ms: muscular tissue / w: whole organism,bl,refines,https://www.nature.com/articles/sdata201513
+,f19,Feeding_behaviour,feeding,Feeding_guild,factor,NA,NA,NA,trap_building/active_hunting/stalking/ambushing/foraging/scavening/grazing/run_and_kill/sit_and_wait,strategy to aquire food items,,stalking,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Hunting_strategy
+,f191,Trap_strategy,feeding,Feeding_behaviour,factor,NA,NA,NA,web/orb/funnel,type of trap constructed to catch prey,,web,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trap_strategy
+,f2,Trophic_level,feeding,feeding,factor,NA,NA,NA,producer/consumer/consumer_higher_level/destruent,general trophic level,,consumer,,
+,f21,Trophic_level_num,feeding,Trophic_level,numeric,level,999,-1,NA,trophic level within the foodweb,levels are counted as -1: destruent /0: producers /1: first level consumer / 2: second level consumer,2,,
+,f1,Sexuality,life-history,life-history,factor,NA,NA,NA,clonal/parthenogenetic/sexual/asexual,strategy for transfer of genes,,parthenogentic,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Reproduction_type
+,f11,Asexual_strategy,life-history,Sexuality,factor,NA,NA,NA,amphytokus/arrhenotokus/deuterotokus/thelyotokus,mode of asexual reproduction,if genes are only transfered from one parent to the offspring,amphytokus,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Asexual_reproduction
+,f2,Reproduction_mode,life-history,life-history,factor,NA,NA,NA,ovipar/vivipar/ovo-vivipar/ovulipar/histotrophic_vivipar/hemotrophic_vivipar,mode of reprodruction,describes the state in which offspring are produced by the adults,ovipar,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Carrying_eggs%20strategy
+,f21,Reproduction_strategy,life-history,Reproduction_mode,factor,NA,NA,NA,iteroparous/semelparous,strategy for number of reproduction events before death,iteroparous: multiple events during life-time / semelparous: one event during life-span,iteroparous,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Reproduction_behaviour
+,f22,Clutch_size,life-history,Reproduction_mode,numeric,count,9999,1,NA,number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Clutch_length
+,f221,Clutch_size_max,life-history,Clutch_size,numeric,count,9999,1,NA,maximum number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,refines,Clutch_size
+,f222,Clutch_size_min,life-history,Clutch_size,numeric,count,9999,1,NA,minimum number of eggs in a clutch,A clutch is a group of eggs which are released or laid within a defined time frame or cared for simultaneously (e.g. within one nest),5,refines,Clutch_size
+,f23,Nr_eggs_lifetime,life-history,Reproduction_mode,numeric,count,9999,1,NA,number of eggs produced by one individual over their life-span,,500,,
+,f231,Nr_eggs_lifetime_max,life-history,Nr_eggs_lifetime,numeric,count,9999,1,NA,maximum number of eggs produced by one individual over their life-span,,500,inheritsfrom,Nr_eggs_lifetime
+,f232,Nr_eggs_lifetime_min,life-history,Nr_eggs_lifetime,numeric,count,9999,1,NA,minimum number of eggs produced by one individual over their life-span,,500,inheritsfrom,Nr_eggs_lifetime
+,f24,Egg_size,life-history,Reproduction_mode,factor,NA,NA,NA,<1mm/<1cm/<10cm/<100m,size class of indivdiual eggs,,<1cm,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Clutch_length
+,f241,Egg_length,life-history,Egg_size,numeric,cm,999,0,NA,length of individual eggs,measured along the longest axis in oval shapes,0.2,refines,Egg_size
+,f2411,Egg_length_max,life-history,Egg_length,numeric,cm,999,0,NA,maximum observed length of individual eggs,measured along the longest axis in oval shapes,1.5,inheritsfrom,Egg_length
+,f2412,Egg_length_min,life-history,Egg_length,numeric,cm,999,0,NA,minimum observed length of individual eggs,measured along the longest axis in oval shapes,0.1,inheritsfrom,Egg_length
+,f242,Egg_width,life-history,Egg_size,numeric,cm,999,0,NA,width of individual eggs,measured along the shorter axis in oval shapes,0.2,refines,Egg_size
+,f2421,Egg_width_max,life-history,Egg_width,numeric,cm,999,0,NA,maximum observed width of individual eggs,measured along the shorter axis in oval shapes,1.5,inheritsfrom,Egg_width
+,f2422,Egg_width_min,life-history,Egg_width,numeric,cm,999,0,NA,minimum observed width of individual eggs,measured along the shorter axis in oval shapes,0.1,inheritsfrom,Egg_width
+,f243,Egg_diameter,life-history,Egg_size,numeric,cm,999,0,NA,diameter of individual eggs,,0.2,refines,Egg_size
+,f2431,Egg_diameter_max,life-history,Egg_diameter,numeric,cm,999,0,NA,maximum observed diameter of individual eggs,,1.5,inheritsfrom,Egg_diameter
+,f2432,Egg_diameter_min,life-history,Egg_diameter,numeric,cm,999,0,NA,minimum observed diameter of individual eggs,,0.1,inheritsfrom,Egg_diameter
+,f244,Egg_volume,life-history,Egg_size,numeric,cm³,9999,0,NA,volume of individual eggs,,0.125,refines,Egg_size
+,f2441,Egg_volume_max,life-history,Egg_volume,numeric,cm³,9999,0,NA,maximum observed volume of individual eggs,,0.75,inheritsfrom,Egg_volume
+,f2442,Egg_volume_min,life-history,Egg_volume,numeric,cm³,9999,0,NA,minimum observed volume of individual eggs,,0.1,inheritsfrom,Egg_volume
+,f245,Egg_weight,life-history,Egg_size,numeric,g,999,0,NA,weight of individual eggs,,2.5,refines,Egg_size
+,f2451,Egg_weight_max,life-history,Egg_weight,numeric,g,999,0,NA,maximum observed weight of individual eggs,,2.5,inheritsfrom,Egg_weight
+,f2451,Egg_weight_min,life-history,Egg_weight,numeric,g,999,0,NA,minimum observed weight of individual eggs,,2.5,inheritsfrom,Egg_weight
+,f246,Egg_biomass,life-history,Egg_size,numeric,g,999,0,NA,estimated biomass of individual eggs,Estimates can be based on volume or size measurements,1.5,refines,Egg_size
+,f25,Egg_development_time,life-history,Reproduction_mode,numeric,day,999,0,NA,time between fertilization and hatching,,5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Development
+,f251,Egg_development_time_max,life-history,Egg_development_time,numeric,day,999,0,NA,maximum observed time between fertilization and hatching,,15,inheritsfrom,Egg_development_time
+,f252,Egg_development_time_min,life-history,Egg_development_time,numeric,day,999,0,NA,minimum observed time between fertilization and hatching,,3,inheritsfrom,Egg_development_time
+,f26,Developmental_stages,life-history,Reproduction_mode,factor,NA,NA,NA,holometabol/hemimetabol/ametabol,mode of metamorphosis,describes development of juveniles between hatching and maturity,holometabol,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Stadial_number
+,f261,Developmental_stages_number,life-history,Developmental_stages,numeric,count,999,0,NA,number of distinct metabolic stages during maturation,,7,refines,Developmental_stages
+,f2611,Nr_larval_stages,life-history,Developmental_stages_number,numeric,count,999,0,NA,number of larval stages,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Stadial_number
+,f262,Developmental_stages_time,life-history,Developmental_stages,numeric,day,999,0,NA,time between hatching and maturation,,15,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Juvenile_stadia_duration
+,f2621,Developmental_stages_time_max,life-history,Developmental_stages_time,numeric,day,999,0,NA,maximum observed time between hatching and maturation,,15,inheritsfrom,Developmental_stages_time
+,f2622,Developmental_stages_time_min,life-history,Developmental_stages_time,numeric,day,999,0,NA,minimum observed time between hatching and maturation,,15,inheritsfrom,Developmental_stages_time
+,f27,Fecundity,life-history,Reproduction_mode,factor,NA,NA,NA,low/medium/high,level of fecundity,,medium,,
+,f271,Generation_number_year,life-history,Fecundity,numeric,count,999,0,NA,number of generations which are produced within one year,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Voltinism
+,f2711,Generation_number_year_max,life-history,Generation_number_year,numeric,count,999,0,NA,maximum observed number of generations which are produced within one year,,4,inheritsfrom,Generation_number_year
+,f2712,Generation_number_year_min,life-history,Generation_number_year,numeric,count,999,0,NA,minimum observed number of generations which are produced within one year,,1,inheritsfrom,Generation_number_year
+,f272,Reproduction_events_year,life-history,Fecundity,numeric,count,999,0,NA,number of reproduction events per individual within one year or season,,2,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Voltinism
+,f2721,Reproduction_events_year_max,life-history,Reproduction_events_year,numeric,count,999,0,NA,maximum observed number of reproduction events per individual within one year or season,,4,inheritsfrom,Reproduction_events_year
+,f2722,Reproduction_events_year_min,life-history,Reproduction_events_year,numeric,count,999,0,NA,minimum observed number of reproduction events per individual within one year or season,,1,inheritsfrom,Reproduction_events_year
+,f273,Reproduction_events_life,life-history,Fecundity,numeric,count,999,0,NA,number of reproduction events per individual during ist life-span,,2,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Voltinism
+,f2731,Reproduction_events_life_max,life-history,Reproduction_events_life,numeric,count,999,0,NA,maximum observed number of reproduction events per individual during ist life-span,,2,inheritsfrom,Reproduction_events_life
+,f2732,Reproduction_events_life_min,life-history,Reproduction_events_life,numeric,count,999,0,NA,minimum observed number of reproduction events per individual during ist life-span,,2,inheritsfrom,Reproduction_events_life
+,f3,Mating_system,life-history,life-history,factor,NA,NA,NA,polyandry/polygamy/polygynandry/promiscuity,system of mate choice,,polyandry,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sociability
+,f4,Life_span_potential,life-history,life-history,numeric,day,9999,0,NA,average time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,90,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Lifespan
+,f41,Life_span_potential_max,life-history,Life_span_potential,numeric,day,9999,0,NA,maximum observed time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,150,inheritsfrom,Life_span_potential
+,f42,Life_span_potential_min,life-history,Life_span_potential,numeric,day,9999,0,NA,minimum observed time between hatching and death due to age,length of life-span under optimal conditions excluding negative biotic and abiotic interactions,30,inheritsfrom,Life_span_potential
+,f5,Life_span_observed,life-history,life-history,numeric,day,9999,0,NA,time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",60,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Lifespan
+,f51,Life_span_observed_max,life-history,Life_span_observed,numeric,day,9999,0,NA,maximum observed time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",90,inheritsfrom,Life_span_observed
+,f52,Life_span_observed_min,life-history,Life_span_observed,numeric,day,9999,0,NA,minimum observed time between hatching and death,"length of life-span as observed under common natural conditions, including negative biotic and abiotic interactions",15,inheritsfrom,Life_span_observed
+,f6,Development,life-history,life-history,character,NA,NA,NA,NA,any progressive production of the phenotypic characteristics of an organism,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Development
+,f61,Age_at_maturity,life-history,Development,numeric,day,9999,0,NA,the age in months at which an individual's physiological development is complete,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Maturation_time
+,f611,Age_at_maturity_max,life-history,Age_at_maturity,numeric,day,9999,0,NA,maximum observed age at which an individual's physiological development is complete,,1,inheritsfrom,Age_at_maturity
+,f612,Age_at_maturity_min,life-history,Age_at_maturity,numeric,day,9999,0,NA,minimum observed age at which an individual's physiological development is complete,,0.25,inheritsfrom,Age_at_maturity
+,f62,Age_at_reproduction,life-history,Development,numeric,day,9999,0,NA,the age in months at which an individual starts reproducing,,0.5,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Reproduction_time
+,f621,Age_at_reproduction_max,life-history,Age_at_reproduction,numeric,day,9999,0,NA,maximum observed age at which an individual starts reproducing,,1,inheritsfrom,Age_at_reproduction
+,f622,Age_at_reproduction_min,life-history,Age_at_reproduction,numeric,day,9999,0,NA,minimum observed age at which an individual starts reproducing,,0.25,inheritsfrom,Age_at_reproduction
+,m1,Reproduction_morphology,morphology,morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for reproduction,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Reproduction
+,m11,Sperm_storage,morphology,Reproduction_morphology,logical,NA,NA,NA,NA,presence of a sperm storage organ,A collection of tissues joined in structural unit to keep some male gametes for future use,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sperm_storage_organ
+,m12,Nr_Ovariols,morphology,Reproduction_morphology,numeric,count,999,1,NA,number of ovariols per individual,,5,,
+,m121,Nr_Ovariols_max,morphology,Nr_Ovariols,numeric,count,999,1,NA,maximum observed number of ovariols per individual,,5,inheritsfrom,Nr_Ovariols
+,m122,Nr_Ovariols_min,morphology,Nr_Ovariols,numeric,count,999,1,NA,minimum observed number of ovariols per individual,,5,inheritsfrom,Nr_Ovariols
+,m2,Body_shape,morphology,morphology,factor,NA,NA,NA,spherical/cylindrical/ovoid/trapezoidal,Geometrical description of the part of that space occupied by the physical structure of an organism,,spherical,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_shape
+,m3,Body_size,morphology,morphology,factor,NA,NA,NA,<1mm/<1cm/<10cm/<100m,general size class,,<1cm,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_dimension
+,m31,Body_length,morphology,Body_size,numeric,cm,999,0,NA,longest dimension of the physical structure of organisms,,0.75,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_length
+,m311,Body_length_max,morphology,Body_length,numeric,cm,999,0,NA,maximum documented body length,,1.25,inheritsfrom,Body_length
+,m312,Body_length_min,morphology,Body_length,numeric,cm,999,0,NA,minimum documented body length,,0.25,inheritsfrom,Body_length
+,m313,Pronotum_length,morphology,Body_length,numeric,cm,999,0,NA,longest dimension of the pronotum,,0.75,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_length
+,m3131,Pronotum_length_max,morphology,Pronotum_length,numeric,cm,999,0,NA,maximum documented pronotum length,,1.25,inheritsfrom,Pronotum_length
+,m3132,Pronotum_length_min,morphology,Pronotum_length,numeric,cm,999,0,NA,minimum documented pronotum length,,0.5,inheritsfrom,Pronotum_length
+,m314,Thorax_length,morphology,Body_length,numeric,cm,999,0,NA,longest dimension of the thorax,,0.75,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_length
+,m3141,Thorax_length_max,morphology,Thorax_length,numeric,cm,999,0,NA,maximum documented thorax length,,1.25,inheritsfrom,Thorax_length
+,m3142,Thorax_length_min,morphology,Thorax_length,numeric,cm,999,0,NA,minimum documented thorax length,,0.5,inheritsfrom,Thorax_length
+,m315,Head_length,morphology,Body_length,numeric,cm,999,0,NA,longest dimension of the head,,0.75,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_length
+,m3151,Head_length_max,morphology,Head_length,numeric,cm,999,0,NA,maximum documented head length,,1.25,inheritsfrom,Head_length
+,m3152,Head_length_min,morphology,Head_length,numeric,cm,999,0,NA,minimum documented head length,,0.5,inheritsfrom,Head_length
+,m32,Body_width,morphology,Body_size,numeric,cm,999,0,NA,second longest dimension of the physical structure of organisms,,0.25,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m321,Body_width_max,morphology,Body_width,numeric,cm,999,0,NA,maximum documented body width,,0.5,inheritsfrom,Body_width
+,m322,Body_width_min,morphology,Body_width,numeric,cm,999,0,NA,minimum documented body width,,0.25,inheritsfrom,Body_width
+,m323,Pronotum_width,morphology,Body_width,numeric,cm,999,0,NA,second longest dimension of the pronotum,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3231,Pronotum_width_max,morphology,Pronotum_width,numeric,cm,999,0,NA,maximum documented pronotum width,,1.25,inheritsfrom,Pronotum_width
+,m3232,Pronotum_width_min,morphology,Pronotum_width,numeric,cm,999,0,NA,minimum documented pronotum width,,0.5,inheritsfrom,Pronotum_width
+,m324,Intertegular_span,morphology,Body_width,numeric,cm,999,0,NA,distance between the two tegulae,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3241,Intertegular_span_max,morphology,Intertegular_span,numeric,cm,999,0,NA,maximum documented distance between the two tegulae,,0.55,inheritsfrom,Intertegular_span
+,m3242,Intertegular_span_min,morphology,Intertegular_span,numeric,cm,999,0,NA,minimum documented distance between the two tegulae,,0.45,inheritsfrom,Intertegular_span
+,m325,Thorax_width,morphology,Body_width,numeric,cm,999,0,NA,second longest dimension of the thorax,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3251,Thorax_width_max,morphology,Thorax_width,numeric,cm,999,0,NA,maximum documented thorax width,,1.25,inheritsfrom,Thorax_width
+,m3252,Thorax_width_min,morphology,Thorax_width,numeric,cm,999,0,NA,minimum documented thorax width,,0.5,inheritsfrom,Thorax_width
+,m326,Head_width,morphology,Body_width,numeric,cm,999,0,NA,second longest dimension of the head,,0.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3261,Head_width_max,morphology,Head_width,numeric,cm,999,0,NA,maximum documented head width,,1.25,inheritsfrom,Head_width
+,m3262,Head_width_min,morphology,Head_width,numeric,cm,999,0,NA,minimum documented head width,,0.5,inheritsfrom,Head_width
+,m33,Body_height,morphology,Body_size,numeric,cm,999,0,NA,third longest dimension of the physical structure of organisms,,0.25,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m331,Body_height_max,morphology,Body_height,numeric,cm,999,0,NA,maximum documented body height,,0.5,inheritsfrom,Body_height
+,m332,Body_height_min,morphology,Body_height,numeric,cm,999,0,NA,minimum documented body height,,0.15,inheritsfrom,Body_height
+,m333,Pronotum_height,morphology,Body_height,numeric,cm,999,0,Na,third longest dimension of the pronotum,,0.25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3331,Pronotum_height_max,morphology,Pronotum_height,numeric,cm,999,0,NA,maximum documented pronotum height,,1.25,inheritsfrom,Pronotum_height
+,m3332,Pronotum_height_min,morphology,Pronotum_height,numeric,cm,999,0,NA,minimum documented pronotum height,,0.5,inheritsfrom,Pronotum_height
+,m334,Thorax_height,morphology,Body_height,numeric,cm,999,0,Na,third longest dimension of the thorax,,0.25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3341,Thorax_height_max,morphology,Thorax_height,numeric,cm,999,0,NA,maximum documented thorax height,,1.25,inheritsfrom,Thorax_height
+,m3342,Thorax_height_min,morphology,Thorax_height,numeric,cm,999,0,NA,minimum documented thorax height,,0.5,inheritsfrom,Thorax_height
+,m335,Head_height,morphology,Body_height,numeric,cm,999,0,Na,third longest dimension of the head,,0.25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_width
+,m3351,Head_height_max,morphology,Head_height,numeric,cm,999,0,NA,maximum documented head height,,1.25,inheritsfrom,Head_height
+,m3352,Head_height_min,morphology,Head_height,numeric,cm,999,0,NA,minimum documented head height,,0.5,inheritsfrom,Head_height
+,m34,Body_mass_live,morphology,Body_size,numeric,g,999,0,NA,body weight measured on a living individual,,20,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Fresh_body_weight
+,m341,Body_mass_live_max,morphology,Body_mass_live,numeric,g,999,0,NA,maximum body weight measured on a living individual,,25,inheritsfrom,Body_mass_live
+,m342,Body_mass_live_min,morphology,Body_mass_live,numeric,g,999,0,NA,minimum body weight measured on a living individual,,15,inheritsfrom,Body_mass_live
+,m35,Body_mass_fresh,morphology,Body_size,numeric,g,999,0,NA,body weight measured on a freshly dead individual,,20,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Fresh_body_weight
+,m351,Body_mass_fresh_max,morphology,Body_mass_fresh,numeric,g,999,0,NA,maximum body weight measured on a freshly dead individual,,25,inheritsfrom,Body_mass_fresh
+,m352,Body_mass_fresh_min,morphology,Body_mass_fresh,numeric,g,999,0,NA,minimum body weight measured on a freshly dead individual,,15,inheritsfrom,Body_mass_fresh
+,m36,Body_mass_dried,morphology,Body_size,numeric,g,999,0,NA,body weight measured on a dried individual,,10,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Dry_body_weight
+,m361,Body_mass_dried_max,morphology,Body_mass_dried,numeric,g,999,0,NA,maximum body weight measured on a dried individual,,15,inheritsfrom,Body_mass_dried
+,m362,Body_mass_dried_min,morphology,Body_mass_dried,numeric,g,999,0,NA,minimum body weight measured on a dried individual,,5,inheritsfrom,Body_mass_dried
+,m37,Body_volume,morphology,Body_size,numeric,cm³,9999,0,NA,body volume,usually calculated from measures of length/width/height,0.75,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_dimension
+,m371,Body_volume_max,morphology,Body_volume,numeric,cm³,9999,0,NA,maximum documented body volume,usually calculated from measures of length/width/height,1,inheritsfrom,Body_volume
+,m372,Body_volume_min,morphology,Body_volume,numeric,cm³,9999,0,NA,minimum documented body volume,usually calculated from measures of length/width/height,0.56,inheritsfrom,Body_volume
+,m38,Length_width_ratio,morphology,Body_size,numeric,ratio,999,0,NA,ratio between body length and body width,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_dimension
+,m381,Length_width_ratio_max,morphology,Length_width_ratio,numeric,ratio,999,0,NA,maximum documented ratio between body length and body width,,2.5,inheritsfrom,Length_width_ratio
+,m382,Length_width_ratio_min,morphology,Length_width_ratio,numeric,ratio,999,0,NA,minimum documented ratio between body length and body width,,1.75,inheritsfrom,Length_width_ratio
+,m383,Length_width_ratio_pronotum,morphology,Length_width_ratio,numeric,ratio,999,0,NA,ratio between pronotum length and width,,2,inheritsfrom,Length_width_ratio
+,m3831,Length_width_ratio_pronotum_max,morphology,Length_width_ratio_pronotum,numeric,ratio,999,0,NA,maximum documented ratio between pronotum length and width,,2.5,inheritsfrom,Length_width_ratio_pronotum
+,m3832,Length_width_ratio_pronotum_min,morphology,Length_width_ratio_pronotum,numeric,ratio,999,0,NA,minimum documented ratio between pronotum length and width,,1.75,inheritsfrom,Length_width_ratio_pronotum
+,m384,Length_width_ratio_thorax,morphology,Length_width_ratio,numeric,ratio,999,0,NA,ratio between thorax length and width,,2,inheritsfrom,Length_width_ratio
+,m3841,Length_width_ratio_thorax_max,morphology,Length_width_ratio_thorax,numeric,ratio,999,0,NA,maximum documented ratio between thorax length and width,,2.5,inheritsfrom,Length_width_ratio_thorax
+,m3842,Length_width_ratio_thorax_min,morphology,Length_width_ratio_thorax,numeric,ratio,999,0,NA,minimum documented ratio between thorax length and width,,1.75,inheritsfrom,Length_width_ratio_thorax
+,m385,Length_width_ratio_head,morphology,Length_width_ratio,numeric,ratio,999,0,NA,ratio between head length and width,,2,inheritsfrom,Length_width_ratio
+,m3851,Length_width_ratio_head_max,morphology,Length_width_ratio_head,numeric,ratio,999,0,NA,maximum documented ratio between head length and width,,2.5,inheritsfrom,Length_width_ratio_head
+,m3852,Length_width_ratio_head_min,morphology,Length_width_ratio_head,numeric,ratio,999,0,NA,minimum documented ratio between head length and width,,1.75,inheritsfrom,Length_width_ratio_head
+,m4,Nutrition_morphology,morphology,morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for nutrition,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Nutrition
+,m41,Mouthpart_type,morphology,Nutrition_morphology,factor,NA,NA,NA,absent/sucking/swallowing/chewing/piercing-sucking,category of mouthpart following the feeding strategy,Any appendage adapted to a specific way of ingesting which shares similar characteristics and forms a smaller division of a larger set,sucking,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Mouthpart_type
+,m42,Mandible_width,morphology,Nutrition_morphology,numeric,mm,999,0,NA,width of a single mandible,,0.02,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Mandible_width
+,m421,Mandible_width_max,morphology,Mandible_width,numeric,mm,999,0,NA,maximum documented width of a single mandible,,0.05,inheritsfrom,Mandible_width
+,m422,Mandible_width_min,morphology,Mandible_width,numeric,mm,999,0,NA,minimum documented width of a single mandible,,0.01,inheritsfrom,Mandible_width
+,m43,Mandible_length,morphology,Nutrition_morphology,numeric,mm,999,0,NA,length of a single mandible,,0.02,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Mandible_length
+,m431,Mandible_length_max,morphology,Mandible_length,numeric,mm,999,0,NA,maximum documented length of a single mandible,,0.05,inheritsfrom,Mandible_length
+,m432,Mandible_length_min,morphology,Mandible_length,numeric,mm,999,0,NA,minimum documented length of a single mandible,,0.01,inheritsfrom,Mandible_length
+,m44,Tongue_length,morphology,Nutrition_morphology,numeric,mm,999,0,NA,length of the tounge,,7,,
+,m441,Tongue_length_max,morphology,Tongue_length,numeric,mm,999,0,NA,maximum documented length of the tounge,,8,inheritsfrom,Tongue_length
+,m442,Tongue_length_min,morphology,Tongue_length,numeric,mm,999,0,NA,minimum documented length of the tounge,,6,inheritsfrom,Tongue_length
+,m45,Rostrum_length,morphology,Nutrition_morphology,numeric,mm,999,0,NA,length of the rostrum,,5,,
+,m451,Rostrum_length_max,morphology,Rostrum_length,numeric,mm,999,0,NA,maximum documented length of the rostrum,,6,inheritsfrom,Rostrum_length
+,m452,Rostrum_length_min,morphology,Rostrum_length,numeric,mm,999,0,NA,minimum documented length of the rostrum,,4,inheritsfrom,Rostrum_length
+,m46,Rostrum_width,morphology,Nutrition_morphology,numeric,mm,999,0,NA,width of the rostrum,,3,,
+,m461,Rostrum_width_max,morphology,Rostrum_width,numeric,mm,999,0,NA,maximum documented width of the rostrum,,4,inheritsfrom,Rostrum_width
+,m462,Rostrum_width_min,morphology,Rostrum_width,numeric,mm,999,0,NA,minimum documented width of the rostrum,,2,inheritsfrom,Rostrum_width
+,m47,Rostrum_ratio,morphology,Nutrition_morphology,numeric,ratio,999,0,NA,ratio between rostrum length and width,,2,,
+,m471,Rostrum_ratio_max,morphology,Rostrum_ratio,numeric,ratio,999,0,NA,maximum documented ratio between rostrum length and width,,2.5,inheritsfrom,Rostrum_ratio
+,m472,Rostrum_ratio_min,morphology,Rostrum_ratio,numeric,ratio,999,0,NA,minimum documented ratio between rostrum length and width,,1,inheritsfrom,Rostrum_ratio
+,m48,Lipidic_storage,morphology,Nutrition_morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for nutrient storage within tissues,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Lipidic_storage_tissues
+,m5,Respiratory_organ_type,morphology,morphology,factor,NA,NA,NA,trachea/lung/dermis,type of respiratory organ,A collection of tissues joined in structural unit to the intake of oxygen and giving off of carbon dioxide which shares similar characteristics and forms a smaller division of a larger set,trachea,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Respiratory_organ_type
+,m6,Sensory_morphology,morphology,morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for receiving sensory stimuli,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Sensitivity
+,m61,Antenna_length,morphology,Sensory_morphology,numeric,cm,999,0,NA,length of the complete antenna,usually measured by summing up the length of individual antenna segments,1.2,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Antenna_length
+,m611,Antenna_length_max,morphology,Antenna_length,numeric,cm,999,0,NA,maximum documented length of the complete antenna,usually measured by summing up the length of individual antenna segments,1.2,inheritsfrom,Antenna_length
+,m612,Antenna_length_min,morphology,Antenna_length,numeric,cm,999,0,NA,minimum documented length of the complete antenna,usually measured by summing up the length of individual antenna segments,1.2,inheritsfrom,Antenna_length
+,m613,Antenna_segment1_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the first antenna segment,counted from the head,0.3,inheritsfrom,Antenna_length
+,m614,Antenna_segment2_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the second antenna segment,counted from the head,0.25,inheritsfrom,Antenna_length
+,m615,Antenna_segment3_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the third antenna segment,counted from the head,0.2,inheritsfrom,Antenna_length
+,m616,Antenna_segment4_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the fourth antenna segment,counted from the head,0.15,inheritsfrom,Antenna_length
+,m617,Antenna_segment5_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the fifth antenna segment,counted from the head,0.1,inheritsfrom,Antenna_length
+,m618,Antenna_segment6_length,morphology,Antenna_length,numeric,cm,999,0,NA,length of the sixth antenna segment,counted from the head,0.05,inheritsfrom,Antenna_length
+,m62,General_Body_pubescence,morphology,Sensory_morphology,factor,NA,NA,NA,none/sparse/dense/patchy,category of body pubescence,,sparse,,
+,m63,Chemoreceptor,morphology,Sensory_morphology,logical,NA,NA,NA,NA,presence of chemoreceptors,,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Chemoreceptor
+,m64,Thermoreceptor,morphology,Sensory_morphology,logical,NA,NA,NA,NA,presence of thermoreceptors,,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Thermoreceptor
+,m65,Mechanoreceptor,morphology,Sensory_morphology,logical,NA,NA,NA,NA,presence of mechanoreceptors,,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Mechanoreceptor
+,m66,Photoreceptor,morphology,Sensory_morphology,logical,NA,NA,NA,NA,presence of photoreceptors,,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Photoreceptor
+,m661,Eye_number,morphology,Photoreceptor,numeric,count,999,0,NA,number of eyes,,8,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Maximal-number-of%20-visual-organ
+,m662,Eye_area,morphology,Photoreceptor,numeric,mm²,999,0,NA,total area comprised by all eyes,usually calculated from measures of eye width/length/diameter,1.6,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Eye_diameter
+,m663,Eye_width,morphology,Photoreceptor,numeric,mm,999,0,NA,width of a single eye,,2,inheritsfrom,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Eye_diameter
+,m6631,Eye_width_max,morphology,Eye_width,numeric,mm,999,0,NA,maximum documented width of a single eye,,2.5,inheritsfrom,Eye_width
+,m6632,Eye_width_min,morphology,Eye_width,numeric,mm,999,0,NA,minimum documented width of a single eye,,1.8,inheritsfrom,Eye_width
+,m664,Eye_diameter,morphology,Photoreceptor,numeric,mm,999,0,NA,diameter of a single eye,,2,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Eye_diameter
+,m6641,Eye_diameter_max,morphology,Eye_diameter,numeric,mm,999,0,NA,maximum documented diameter of a single eye,,2.5,inheritsfrom,Eye_diameter
+,m6642,Eye_diameter_min,morphology,Eye_diameter,numeric,mm,999,0,NA,minimum documented diameter of a single eye,,1.8,inheritsfrom,Eye_diameter
+,m7,Locomotion_morphology,morphology,morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for locomotion,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Locomotion
+,m71,Leg_length,morphology,Locomotion_morphology,numeric,mm,999,0,NA,total length of the leg,,25,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=leg_length
+,m711,Leg_length_max,morphology,Leg_length,numeric,mm,999,0,NA,maximum documented total length of the leg,,30,inheritsfrom,Leg_length
+,m712,Leg_length_min,morphology,Leg_length,numeric,mm,999,0,NA,minimum documented total length of the leg,,20,inheritsfrom,Leg_length
+,m713,Hind_leg_length,morphology,Leg_length,numeric,mm,999,0,NA,total length of the hind leg,,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=leg_length
+,m7131,Hind_leg_length_max,morphology,Hind_leg_length,numeric,mm,999,0,NA,maximum documented total length of the hind leg,,30,inheritsfrom,Hind_leg_length
+,m7132,Hind_leg_length_min,morphology,Hind_leg_length,numeric,mm,999,0,NA,minimum documented total length of the hind leg,,20,inheritsfrom,Hind_leg_length
+,m714,Mid_leg_length,morphology,Leg_length,numeric,mm,999,0,NA,total length of the mid leg,,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=leg_length
+,m7141,Mid_leg_length_max,morphology,Mid_leg_length,numeric,mm,999,0,NA,maximum documented total length of the mid leg,,30,inheritsfrom,Mid_leg_length
+,m7142,Mid_leg_length_min,morphology,Mid_leg_length,numeric,mm,999,0,NA,minimum documented total length of the mid leg,,20,inheritsfrom,Mid_leg_length
+,m715,Front_leg_length,morphology,Leg_length,numeric,mm,999,0,NA,total length of the front leg,,25,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=leg_length
+,m7151,Front_leg_length_max,morphology,Front_leg_length,numeric,mm,999,0,NA,maximum documented total length of the front leg,,30,inheritsfrom,Front_leg_length
+,m7152,Front_leg_length_min,morphology,Front_leg_length,numeric,mm,999,0,NA,minimum documented total length of the front leg,,20,inheritsfrom,Front_leg_length
+,m716,Femur_length,morphology,Leg_length,numeric,mm,999,0,NA,length of femur,,15,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_length
+,m7161,Femur_length_max,morphology,Femur_length,numeric,mm,999,0,NA,maximum documented length of femur,,17,inheritsfrom,Femur_length
+,m7162,Femur_length_min,morphology,Femur_length,numeric,mm,999,0,NA,minimum documented length of femur,,13,inheritsfrom,Femur_length
+,m7163,Front_femur_length,morphology,Femur_length,numeric,mm,999,0,NA,length of front femur,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_length
+,m71631,Front_femur_length_max,morphology,Front_femur_length,numeric,mm,999,0,NA,maximum documented length of front femur,,17,inheritsfrom,Front_femur_length
+,m71632,Front_femur_length_min,morphology,Front_femur_length,numeric,mm,999,0,NA,minimum documented length of front femur,,13,inheritsfrom,Front_femur_length
+,m7164,Mid_femur_length,morphology,Femur_length,numeric,mm,999,0,NA,length of mid femur,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_length
+,m71641,Mid_femur_length_max,morphology,Mid_femur_length,numeric,mm,999,0,NA,maximum documented length of mid femur,,17,inheritsfrom,Mid_femur_length
+,m71642,Mid_femur_length_min,morphology,Mid_femur_length,numeric,mm,999,0,NA,minimum documented length of mid femur,,13,inheritsfrom,Mid_femur_length
+,m7165,Hind_femur_length,morphology,Femur_length,numeric,mm,999,0,NA,length of hind femur,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_length
+,m71651,Hind_femur_length_max,morphology,Hind_femur_length,numeric,mm,999,0,NA,maximum documented length of hind femur,,17,inheritsfrom,Hind_femur_length
+,m71652,Hind_femur_length_min,morphology,Hind_femur_length,numeric,mm,999,0,NA,minimum documented length of hind femur,,13,inheritsfrom,Hind_femur_length
+,m717,Tibia_length,morphology,Leg_length,numeric,mm,999,0,NA,length of Tibia,,15,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Tibia_length
+,m7171,Tibia_length_max,morphology,Tibia_length,numeric,mm,999,0,NA,maximum documented length of Tibia,,17,inheritsfrom,Tibia_length
+,m7172,Tibia_length_min,morphology,Tibia_length,numeric,mm,999,0,NA,minimum documented length of Tibia,,13,inheritsfrom,Tibia_length
+,m7173,Front_tibia_length,morphology,Tibia_length,numeric,mm,999,0,NA,length of front tibia,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Tibia_length
+,m71731,Front_tibia_length_max,morphology,Front_tibia_length,numeric,mm,999,0,NA,maximum documented length of front tibia,,17,inheritsfrom,Front_tibia_length
+,m71732,Front_tibia_length_min,morphology,Front_tibia_length,numeric,mm,999,0,NA,minimum documented length of front tibia,,13,inheritsfrom,Front_tibia_length
+,m7174,Mid_Tibia_length,morphology,Tibia_length,numeric,mm,999,0,NA,length of mid tibia,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Tibia_length
+,m71741,Mid_Tibia_length_max,morphology,Mid_Tibia_length,numeric,mm,999,0,NA,maximum documented length of mid tibia,,17,inheritsfrom,Mid_Tibia_length
+,m71742,Mid_Tibia_length_min,morphology,Mid_Tibia_length,numeric,mm,999,0,NA,minimum documented length of mid tibia,,13,inheritsfrom,Mid_Tibia_length
+,m7175,Hind_tibia_length,morphology,Tibia_length,numeric,mm,999,0,NA,length of hind tibia,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Tibia_length
+,m71751,Hind_tibia_length_max,morphology,Hind_tibia_length,numeric,mm,999,0,NA,maximum documented length of hind tibia,,17,inheritsfrom,Hind_tibia_length
+,m71752,Hind_tibia_length_min,morphology,Hind_tibia_length,numeric,mm,999,0,NA,minimum documented length of hind tibia,,13,inheritsfrom,Hind_tibia_length
+,m718,Trochanter_length,morphology,Leg_length,numeric,mm,999,0,NA,length of trochanter,,15,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trochanter_length
+,m7181,Trochanter_length_max,morphology,Trochanter_length,numeric,mm,999,0,NA,maximum documented length of trochanter,,17,inheritsfrom,Trochanter_length
+,m7182,Trochanter_length_min,morphology,Trochanter_length,numeric,mm,999,0,NA,minimum documented length of trochanter,,13,inheritsfrom,Trochanter_length
+,m7183,Front_trochanter_length,morphology,Trochanter_length,numeric,mm,999,0,NA,length of front trochanter,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trochanter_length
+,m71831,Front_trochanter_length_max,morphology,Front_trochanter_length,numeric,mm,999,0,NA,maximum documented length of front trochanter,,17,inheritsfrom,Front_trochanter_length
+,m71832,Front_trochanter_length_min,morphology,Front_trochanter_length,numeric,mm,999,0,NA,minimum documented length of front trochanter,,13,inheritsfrom,Front_trochanter_length
+,m7184,Mid_trochanter_length,morphology,Trochanter_length,numeric,mm,999,0,NA,length of mid trochanter,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trochanter_length
+,m71841,Mid_trochanter_length_max,morphology,Mid_trochanter_length,numeric,mm,999,0,NA,maximum documented length of mid trochanter,,17,inheritsfrom,Mid_trochanter_length
+,m71842,Mid_trochanter_length_min,morphology,Mid_trochanter_length,numeric,mm,999,0,NA,minimum documented length of mid trochanter,,13,inheritsfrom,Mid_trochanter_length
+,m7185,Hind_trochanter_length,morphology,Trochanter_length,numeric,mm,999,0,NA,length of hind trochanter,,15,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Trochanter_length
+,m71851,Hind_trochanter_length_max,morphology,Hind_trochanter_length,numeric,mm,999,0,NA,maximum documented length of hind trochanter,,17,inheritsfrom,Hind_trochanter_length
+,m71852,Hind_trochanter_length_min,morphology,Hind_trochanter_length,numeric,mm,999,0,NA,minimum documented length of hind trochanter,,13,inheritsfrom,Hind_trochanter_length
+,m72,Femur_width,morphology,Locomotion_morphology,numeric,mm,999,0,NA,width of the femur,,3,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_width
+,m721,Femur_width_max,morphology,Femur_width,numeric,mm,999,0,NA,maximum documented width of the femur,,4,inheritsfrom,Femur_width
+,m722,Femur_width_min,morphology,Femur_width,numeric,mm,999,0,NA,minimum documented width of the femur,,2,inheritsfrom,Femur_width
+,m723,Front_femur_width,morphology,Femur_width,numeric,mm,999,0,NA,width of the front femur,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_width
+,m7231,Front_femur_width_max,morphology,Front_femur_width,numeric,mm,999,0,NA,maximum documented width of the front femur,,4,inheritsfrom,Front_femur_width
+,m7232,Front_femur_width_min,morphology,Front_femur_width,numeric,mm,999,0,NA,minimum documented width of the front femur,,2,inheritsfrom,Front_femur_width
+,m724,Mid_femur_width,morphology,Femur_width,numeric,mm,999,0,NA,width of the mid femur,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_width
+,m7241,Mid_femur_width_max,morphology,Mid_femur_width,numeric,mm,999,0,NA,maximum documented width of the mid femur,,4,inheritsfrom,Mid_femur_width
+,m7242,Mid_femur_width_min,morphology,Mid_femur_width,numeric,mm,999,0,NA,minimum documented width of the mid femur,,2,inheritsfrom,Mid_femur_width
+,m725,Hind_femur_width,morphology,Femur_width,numeric,mm,999,0,NA,width of the hind femur,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Femur_width
+,m7251,Hind_femur_width_max,morphology,Hind_femur_width,numeric,mm,999,0,NA,maximum documented width of the hind femur,,4,inheritsfrom,Hind_femur_width
+,m7252,Hind_femur_width_min,morphology,Hind_femur_width,numeric,mm,999,0,NA,minimum documented width of the hind femur,,2,inheritsfrom,Hind_femur_width
+,m73,Wing_appearance,morphology,Locomotion_morphology,factor,NA,NA,NA,apter/hypopter/submacropter/macropter/brachypter,type of membranous wings,,apter,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing_development
+,m731,Wing_size_relation,morphology,Wing_appearance,factor,NA,NA,NA,eupter/parapter,Parapter: front wings smaller than hind wings / Eupter: front wings equal with hind wings,,eupter,,
+,m7311,Front_wing_width,morphology,Wing_size_relation,numeric,cm,999,0,NA,second longest dimension of the front wing,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m73111,Front_wing_width_max,morphology,Front_wing_width,numeric,cm,999,0,NA,maximum documented second longest dimension of the front wing,,2.5,inheritsfrom,Front_wing_width
+,m73112,Front_wing_width_min,morphology,Front_wing_width,numeric,cm,999,0,NA,minimum documented second longest dimension of the front wing,,1.5,inheritsfrom,Front_wing_width
+,m7312,Front_wing_surface,morphology,Wing_size_relation,numeric,cm²,999,0,NA,total surface area of the front wing,,2.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing_surface
+,m73121,Front_wing_surface_max,morphology,Front_wing_surface,numeric,cm²,999,0,NA,maximum documented total surface area of the front wing,,2.75,inheritsfrom,Front_wing_surface
+,m73122,Front_wing_surface_min,morphology,Front_wing_surface,numeric,cm²,999,0,NA,minimum documented total surface area of the front wing,,2.25,inheritsfrom,Front_wing_surface
+,m7313,Hind_wing_length,morphology,Wing_size_relation,numeric,cm,999,0,NA,longest dimension of the hind wing,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m73131,Hind_wing_length_max,morphology,Hind_wing_length,numeric,cm,999,0,NA,maximum documented longest dimension of the hind wing,,4,inheritsfrom,Hind_wing_length
+,m73132,Hind_wing_length_min,morphology,Hind_wing_length,numeric,cm,999,0,NA,minimum documented longest dimension of the hind wing,,2,inheritsfrom,Hind_wing_length
+,m7314,Hind_wing_width,morphology,Wing_size_relation,numeric,cm,999,0,NA,second longest dimension of the hind wing,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m73141,Hind_wing_width_max,morphology,Hind_wing_width,numeric,cm,999,0,NA,maximum documented second longest dimension of the hind wing,,2.5,inheritsfrom,Hind_wing_width
+,m73142,Hind_wing_width_min,morphology,Hind_wing_width,numeric,cm,999,0,NA,minimum documented second longest dimension of the hind wing,,1.5,inheritsfrom,Hind_wing_width
+,m7315,Hind_wing_surface,morphology,Wing_size_relation,numeric,cm²,999,0,NA,total surface area of the hind wing,,2.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing_surface
+,m73151,Hind_wing_surface_max,morphology,Hind_wing_surface,numeric,cm²,999,0,NA,maximum documented total surface area of the hind wing,,2.75,inheritsfrom,Hind_wing_surface
+,m73152,Hind_wing_surface_min,morphology,Hind_wing_surface,numeric,cm²,999,0,NA,minimum documented total surface area of the hind wing,,2.25,inheritsfrom,Hind_wing_surface
+,m732,Wing_appearance_Females,morphology,Wing_appearance,factor,NA,NA,NA,apter/hypopter/submacropter/macropter/brachypter,type of membranous wings in females,,apter,refines,Wing_appearance
+,m733,Wing_appearance_Males,morphology,Wing_appearance,factor,NA,NA,NA,apter/hypopter/submacropter/macropter/brachypter,type of membranous wings in males,,apter,refines,Wing_appearance
+,m734,Front_wing_length,morphology,Wing_size_relation,numeric,cm,999,0,NA,longest dimension of the front wing,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m7341,Front_wing_length_max,morphology,Front_wing_length,numeric,cm,999,0,NA,maximum documented longest dimension of the front wing,,4,inheritsfrom,Front_wing_length
+,m7342,Front_wing_length_min,morphology,Front_wing_length,numeric,cm,999,0,NA,minimum documented longest dimension of the front wing,,2,inheritsfrom,Front_wing_length
+,m735,Elytra_length,morphology,Wing_appearance,numeric,cm,999,0,NA,longest dimension of the elytra,,3,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m7351,Elytra_length_max,morphology,Elytra_length,numeric,cm,999,0,NA,maximum documented longest dimension of the elytra,,4,inheritsfrom,Elytra_length
+,m7352,Elytra_length_min,morphology,Elytra_length,numeric,cm,999,0,NA,minimum documented longest dimension of the elytra,,2,inheritsfrom,Elytra_length
+,m736,Elytra_width,morphology,Wing_appearance,numeric,cm,999,0,NA,second longest dimension of the elytra,,2,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing
+,m7361,Elytra_width_max,morphology,Elytra_width,numeric,cm,999,0,NA,maximum documented second longest dimension of the elytra,,2.5,inheritsfrom,Elytra_width
+,m7362,Elytra_width_min,morphology,Elytra_width,numeric,cm,999,0,NA,minimum documented second longest dimension of the elytra,,1.5,inheritsfrom,Elytra_width
+,m737,Elytra_surface,morphology,Wing_appearance,numeric,cm²,999,0,NA,total surface area of the elytra,,2.5,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Wing_surface
+,m7371,Elytra_surface_max,morphology,Elytra_surface,numeric,cm²,999,0,NA,maximum documented total surface area of the elytra,,2.75,inheritsfrom,Elytra_surface
+,m7372,Elytra_surface_min,morphology,Elytra_surface,numeric,cm²,999,0,NA,minimum documented total surface area of the elytra,,2.25,inheritsfrom,Elytra_surface
+,m738,Radial_nervure_length,morphology,Wing_appearance,numeric,cm,999,0,NA,length of the radial nervure of a wing,,2.5,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Radial_nervure_length
+,m7381,Radial_nervure_length_max,morphology,Radial_nervure_length,numeric,cm,999,0,NA,maximum documented length of the radial nervure of a wing,,3,inheritsfrom,Radial_nervure_length
+,m7382,Radial_nervure_length_min,morphology,Radial_nervure_length,numeric,cm,999,0,NA,minimum documented length of the radial nervure of a wing,,2,inheritsfrom,Radial_nervure_length
+,m739,Median_nervure_length,morphology,Wing_appearance,numeric,cm,999,0,NA,length of the median nervure of a wing,,2,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Median_nervure_length
+,m7391,Median_nervure_length_max,morphology,Median_nervure_length,numeric,cm,999,0,NA,maximum documented length of the median nervure of a wing,,2,inheritsfrom,Median_nervure_length
+,m7392,Median_nervure_length_min,morphology,Median_nervure_length,numeric,cm,999,0,NA,minimum documented length of the median nervure of a wing,,2,inheritsfrom,Median_nervure_length
+,m74,Front_wing_span,morphology,Locomotion_morphology,numeric,cm,999,0,NA,distance between the outer tips of the front wings when in flight,,12,,
+,m741,Front_wing_span_max,morphology,Front_wing_span,numeric,cm,999,0,NA,maximum documented distance between the outer tips of the front wings when in flight,,15,inheritsfrom,Front_wing_span
+,m742,Front_wing_span_min,morphology,Front_wing_span,numeric,cm,999,0,NA,minimum documented distance between the outer tips of the front wings when in flight,,10,inheritsfrom,Front_wing_span
+,m75,Hind_wing_span,morphology,Locomotion_morphology,numeric,cm,999,0,NA,distance between the outer tips of the hind wings when in flight,,12,,
+,m751,Hind_wing_span_max,morphology,Hind_wing_span,numeric,cm,999,0,NA,maximum documented distance between the outer tips of the hind wings when in flight,,15,inheritsfrom,Hind_wing_span
+,m752,Hind_wing_span_min,morphology,Hind_wing_span,numeric,cm,999,0,NA,minimum documented distance between the outer tips of the hind wings when in flight,,10,inheritsfrom,Hind_wing_span
+,m76,Saltatory_apparatus,morphology,Locomotion_morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for jumping,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Saltatory_apparatus
+,m761,Saltatory_apparatus_length,morphology,Saltatory_apparatus,numeric,cm,999,0,NA,length of the saltatory apparatus,,3,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Saltatory_apparatus_length
+,m7611,Saltatory_apparatus_length_max,morphology,Saltatory_apparatus_length,numeric,cm,999,0,NA,maximum documented length of the saltatory apparatus,,4,inheritsfrom,Saltatory_apparatus_length
+,m7612,Saltatory_apparatus_length_min,morphology,Saltatory_apparatus_length,numeric,cm,999,0,NA,minimum documented length of the saltatory apparatus,,2,inheritsfrom,Saltatory_apparatus_length
+,m8,Leg_body_ratio,morphology,morphology,numeric,ratio,999,0,NA,ration between leg length and body lengt,,2,,
+,m81,Leg_body_ratio_max,morphology,Leg_body_ratio,numeric,ratio,999,0,NA,maximum documented ration between leg length and body lengt,,2.25,inheritsfrom,Leg_body_ratio
+,m82,Leg_body_ratio_min,morphology,Leg_body_ratio,numeric,ratio,999,0,NA,minimum documented ration between leg length and body lengt,,1.75,inheritsfrom,Leg_body_ratio
+,m9,Protection_morphology,morphology,morphology,character,NA,NA,NA,NA,any morphological structure which serves a specialized function for protection against biotic and abiotic threats,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Protection
+,m91,Body_color,morphology,Protection_morphology,character,NA,NA,NA,NA,color of the main body,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_color
+,m911,Body_color_gradient,morphology,Body_color,character,NA,NA,NA,NA,color gradient of the main body,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_color_gradient
+,m912,Body_color_pattern,morphology,Body_color,character,NA,NA,NA,NA,color pattern of the main body,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Body_color_pattern
+,m92,Repellent_glands,morphology,Protection_morphology,logical,NA,NA,NA,NA,presence of glands secreting noxious liquids or vapors to repel antagonists,includes synonyms repugnatorial glands and repulsive glands,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Repellent_glands
+,m93,Sclerotization,morphology,Protection_morphology,logical,NA,NA,NA,NA,presence of hardened body surface by deposition of sclerotin or other substances in the external covering of the physical structure of organisms,includes synonyms cuticle or integument sclerotization/sclerification,TRUE,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Repellent_glands
+,m94,Detoxication_strategy,morphology,Protection_morphology,character,NA,NA,NA,NA,any morphological structure or ability which serves a specialized function to eliminate or neutralize a toxin,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Detoxication_strategies
+,m95,Water_regulation_morphology,morphology,Protection_morphology,character,NA,NA,NA,NA,any morphological structure which ensures an hydric status of the animal,,NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=waterregulation%20strategies
+,p1,Water_regulation_physiology,physiology,physiology,character,NA,NA,NA,NA,any physiological mechanism which ensures an hydric status of the animal,,NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=waterregulation%20strategies
+,p2,Thermal_regulation_physiology,physiology,physiology,character,NA,NA,NA,NA,any physiological mechanism which keeps the body temperature within certain boundaries,,NA,refines,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Thermoregulation_strategies
+,p3,Water_loss_rate,physiology,physiology,numeric,mg/h,999,0,NA,rate of water loss at ambient temperature,,0.5,,
+,p4,Larval_inundation_tolerance,physiology,physiology,numeric,hour,9999,0,NA,maximum time under water after which larvae resume development,,12,,
+,p5,Venom_excretion,physiology,physiology,character,NA,NA,NA,NA,physiological mechanism by which venom is secreted,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Venom_excretion
+,p6,Regeneration_strategy,physiology,physiology,character,NA,NA,NA,NA,any physiological mechanism which allows replacement of body parts,,NA,equals,http://t-sita.cesab.org/BETSI_vizInfo.jsp?trait=Regeneration_strategies
+,x1,Flower_color_preference,pollination,pollination,character,NA,NA,NA,NA,color or set of colors which is preferably approached,,NA,,
+,x2,Flower_visitor,pollination,pollination,logical,NA,NA,NA,NA,individuals visit flowers to collect pollen and/or nectar,,TRUE,,
+,x21,Flower_specialisation,pollination,Flower_visitor,character,NA,NA,NA,NA,type of flower which is preferably approached,,NA,,
+,x22,Flower_feeding,pollination,Flower_visitor,factor,NA,NA,NA,nectar/pollen/both,nutrient source selected by flower visitors,,nectar,,
