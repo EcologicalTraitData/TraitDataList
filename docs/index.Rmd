@@ -10,15 +10,36 @@ output:
 
 **This is an exemplary list of traits following the Ecological Traitdata Standard (ETS), version 0.4** 
 
-This defined vocabulary aims at providing all essential columns for raw data of functional trait measurements for ecological research. Most terms relate to terms from the Darwin Core Standard and it's Extensions (terms of DWC are referenced thus in field 'Refines'; the full Darwin Core Standard can be found here: http://rs.tdwg.org/dwc/terms/index.htm)
+The ETS (https://ecologicaltraitdata.github.io/TraitDataStandard/) defines a vocabulary of essential columns for raw data of functional traits for ecological research. 
 
-The traitlist of terms is ordered into a **core section** with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for **metadata** information of particular importance for trait data. A final section provides defined terms for **lists of trait definitions**, also termed a Trait Thesaurus. 
+The ETS is organized into a **core section** with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for **metadata** information of particular importance for trait data. A final section provides defined terms for **lists of trait definitions**, also termed a Trait Thesaurus. 
 
+The following list of traits serve as an example of a Trait Thesaurus. It is based around traits for invertebrates, but definitions were made with potential applicability to other animal groups. Nevertheless, this Trait Thesaurus is **not** an attempt at a complete Thesaurus for all animal groups, but rather a starting point for other Thesauri.
 
-## Structure of trait data:
+## Structure of the trait data:
 
+Each trait is assigned to one of seven trait classes, which differentiate broad types of traits. Traits with very general definitions form the highest level of the trait hierarchy, with more specific traits being assigned to those general traits. Each traits' position in the trait hierarchy is defined through the **broaderTerm** column, which indicates the next higher-level trait. Any trait can be defined as the **broaderTerm** for more than one trait.
+Lowest-level traits are often a part of a measurement or range, e.g. maximum, minimum, average values.
 
-## defined terms:
+For example: *Clutch_size_max* is a more specific definition of *Clutch_size* which itself is a specific aspect of *Reproduction_strategy* which is a specific description of *Reproduction_mode* which is one of the high-level traits in the class *life-history*. The high-level trait *Reproduction_mode* is defined as the **broaderTerm** for seven traits.
+
+Categorical traits are defined by factor levels, which is in contrast to other Trait Thesauri where each factor level is an individual trait of boolean class. In this Trait Thesaurus, factor levels are suggestions without being intended to be exhaustive. 
+
+Numerical traits include information on the **traitUnit**, which is essential for complementarity with other trait databases, and information on **maxAllowed** and **minAllowed** values. Those value ranges encompass the range of mathematically possible values (e.g. *Clutch_size* cannot be negative) but does not reflect a biologically meaningful range.
+
+For each trait, a **source** is given and its relation to that source is indicated in **relationSource**:
+
+- *equals* if the trait is taken directly from the source without modification
+
+- *takenfrom* if the trait is based on a trait list which does not include formal descriptions or trait-specific references (e.g. the trait was used in a scientific publication or is provided in taxonomic literature)
+
+- *refines* if the trait gives a more precice definition of the original trait
+
+- *broadens* if the trait gives a more general definition of the original trait
+
+- *inheritsfrom* if the trait is slight modification of the original trait but changes in the definition of the original trait should be reflected in this trait as well (e.g. *Body_length_max* is a modification of *Body_length*).
+
+## Defined traits:
 
 ```{r, results = 'asis', echo = FALSE, warning = FALSE}
 library(data.table)
