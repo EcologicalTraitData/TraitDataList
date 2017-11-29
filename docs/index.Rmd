@@ -45,7 +45,7 @@ For each trait, a **source** is given and its relation to that source is indicat
 library(data.table)
 library(knitr)
 traitlist <- read.csv("../traitdatastandard_traitlist.csv")
-urlroot <- "http://ecologicaltraitdata.github.io/TraitDataList/"
+urlroot <- "https://ecologicaltraitdata.github.io/TraitDataList/"
 
 traitNames <- traitlist$traitName
 sections <- traitlist$trait_class
