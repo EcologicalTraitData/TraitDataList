@@ -10,7 +10,7 @@ output:
 
 **This is an exemplary list of traits following the Ecological Traitdata Standard (ETS), version 0.4** 
 
-The ETS (https://ecologicaltraitdata.github.io/TraitDataStandard/) defines a vocabulary of essential columns for raw data of functional traits for ecological research. 
+The ETS (https://ecologicaltraitdata.github.io/ETS/) defines a vocabulary of essential columns for raw data of functional traits for ecological research. 
 
 The ETS is organized into a **core section** with essential columns for trait data, extensions which are allowing to provide additional layers of information, as well as a vocabulary for **metadata** information of particular importance for trait data. A final section provides defined terms for **lists of trait definitions**, also termed a Trait Thesaurus. 
 
